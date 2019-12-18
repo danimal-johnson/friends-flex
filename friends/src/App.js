@@ -1,28 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { PrivateRoute } from "./components/PrivateRoute";
 
+import Header from './components/Header';
 import Login from './components/Login';
-import Friends from './components/Friends';
+import FriendsList from './components/FriendsList';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <button onClick={() => localStorage.clear()}>Log Out</button>
-        </header>
-        <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/friends">Friend List</Link>
-            </li>
-          </ul>
+        <Header />
         <Switch>
-          <PrivateRoute path="/friends" component={Friends} />
+          <PrivateRoute path="/friends" component={FriendsList} />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>

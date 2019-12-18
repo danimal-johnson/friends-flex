@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
-export const Login = () => {
+export const Login = props => {
   const [credentials, setCredentials] =
     useState ({ username: "Lambda School", password: "i<3Lambd4"}); 
 
@@ -21,6 +21,7 @@ export const Login = () => {
       .then(res => {
         console.log(res.data);
         localStorage.setItem("token", res.data.payload);
+        props.history.push("/friends");
       })
       .catch(err => {
         console.log("Error:", err);
@@ -46,7 +47,8 @@ export const Login = () => {
             value={credentials.password}
             onChange={handleChange("password")}
           />
-          <button>Log in</button> {/* && Some logging-in indicator */}
+          <button>Log in</button>
+          {/* && Some logging-in indicator */}
         </form>
       </div>
     </div>
