@@ -44,7 +44,7 @@ Topics:
 * Create a form to collects data for a new friend.
 * Make a POST request to add a friend to the database
 * Each `friend` item that is in the `friends` array should have the following format:
-- [ ] Create a new form to post this data:
+- [x] Create a new form to post this data:
 
 
 ```js

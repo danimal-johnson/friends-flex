@@ -6,7 +6,7 @@ export const Friend = props => {
 
   return (
     <div class="friend-card">
-      <div>{props.info.name}</div>
+      <div className="friend-name">{props.info.name}</div>
       <div>Age {props.info.age}</div>
       <div>{props.info.email}</div>
     </div>

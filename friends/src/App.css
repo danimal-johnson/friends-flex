@@ -2,34 +2,59 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   height: 8rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: white;
 }
+
 
 #logo {
   width: 200px;
   height: 5rem;
-  border: 1px solid hotpink;
-  background: url("assets/friends-logo.png");
+  justify-self: flex-start;
+  margin-left: 20px;
 }
 
+#logo img {
+  width: 100%;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: flex-row;
+  justify-content: space-between;
+}
+
+.nav-section button {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  height: 2.4rem;
+  align-self: center;
+  margin-right: 20px;
+  font-size: 1.6rem;
+}
+
+.nav-section button:hover {
+  color: #04f8f8;
+  border: 2px solid #04f8f8;
+}
 .hdr-link {
   margin: 50px;
   color: hotpink;
-  background: greenyellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hdr-link:hover {
+  color: #04f8f8;
 }
 
 .App-link {
@@ -53,4 +78,12 @@
 
   border: 1px solid black;
   border-radius: 10px;
+  background: white;
+
+  box-shadow: 0 4px 8px 0 rgba(34, 33, 33, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.friend-card .friend-name {
+  font-size: 2rem;
+  font-weight: bold;
 }
