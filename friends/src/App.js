@@ -11,7 +11,7 @@ function App(props) {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header props={props} />
         <Switch>
           <PrivateRoute path="/friends" component={FriendsList} />
           <Route path="/login" component={Login} />
